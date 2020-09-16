@@ -2137,8 +2137,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.selectedContact && message.from == this.selectedContact.id) {
         this.saveNewMessage(message);
         return;
-      } // this.updateUnreadCount(message.from_contact, false);
-
+      }
     }
   },
   components: {
