@@ -34,6 +34,7 @@
                 .then((response) => {
                     this.contacts = response.data;
                 });
+            this.fetchChat();
         },
         methods: {
             startChatWith(contact){
@@ -51,6 +52,13 @@
                     this.saveNewMessage(message);
                     return;
                 }
+            },
+            fetchChat(){
+                setInterval( () => {
+                    if (this.selectedContact) {
+                        this.startChatWith(this.selectedContact);
+                    }
+                },5000);
             },
         },
         components: { Chat, Contacts }

@@ -2120,6 +2120,7 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/contacts').then(function (response) {
       _this.contacts = response.data;
     });
+    this.fetchChat();
   },
   methods: {
     startChatWith: function startChatWith(contact) {
@@ -2138,6 +2139,15 @@ __webpack_require__.r(__webpack_exports__);
         this.saveNewMessage(message);
         return;
       }
+    },
+    fetchChat: function fetchChat() {
+      var _this3 = this;
+
+      setInterval(function () {
+        if (_this3.selectedContact) {
+          _this3.startChatWith(_this3.selectedContact);
+        }
+      }, 5000);
     }
   },
   components: {
