@@ -34,7 +34,10 @@
                 });
             }
         },
-        components: {Messages, MessageSource},
+        components: {
+            Messages,
+            MessageSource
+        },
     }
 </script>
 

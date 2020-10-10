@@ -14,6 +14,4 @@ create database
 
 php artisan migrate
 
-php artisan migrate
-
 npm run watch
